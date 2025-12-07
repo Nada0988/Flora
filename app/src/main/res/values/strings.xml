@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flora Shop</string>
+    <string name="welcome_text">Welcome to Flora Shop</string>
+    <string name="start_button">Start Shopping</string>
+</resources>
