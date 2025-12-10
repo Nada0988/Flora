@@ -1,48 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
-    android:orientation="vertical"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:gravity="center">
-
-    <TextView
-        android:id="@+id/tvHomeTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Plants / Flowers"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
-
-    <!-- Example plant item -->
-    <TextView
-        android:id="@+id/tvPlantName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aloe Vera"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+    android:background="#F7F5F7">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:orientation="vertical"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btnBuy"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Buy"
-            android:layout_marginEnd="16dp"/>
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-        <Button
-            android:id="@+id/btnDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Details"/>
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:tint="@color/pinkAccent"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Flora"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/brown700"
+                android:gravity="start"/>
+
+            <ImageButton
+                android:id="@+id/btn_filter"
+                android:layout_width="48dp"
+                android:layout_height="40dp"
+                android:background="@drawable/filter_bg"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:tint="@color/pink700"/>
+        </LinearLayout>
+
+        <Space android:layout_height="12dp" android:layout_width="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/search_bg"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:hint="Search"
+                android:background="@null"
+                android:inputType="text"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:tint="@color/pinkAccent"/>
+        </LinearLayout>
+
+        <Space android:layout_height="12dp" android:layout_width="match_parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"/>
+
+        <!-- bottom bar removed as requested -->
+        <!-- If you want to hide it instead of removing, set android:visibility="gone" on the container -->
+
     </LinearLayout>
 
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

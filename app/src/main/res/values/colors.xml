@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- الألوان اللي طلبها ال-layout -->
+    <color name="pinkAccent">#FF4081</color>    <!-- قابل للتعديل لو عندك لون تاني -->
+    <color name="pink700">#C2185B</color>
+    <color name="brown700">#5D4037</color>
+
+    <!-- ألوان شائعة ممكن تحتاجيها كمان -->
+    <color name="colorPrimary">#FF4081</color>
+    <color name="colorPrimaryVariant">#F06292</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
 </resources>

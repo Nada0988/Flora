@@ -2,20 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:orientation="vertical"
+    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/img_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/flower1" />
 
-    <!-- Content placeholder -->
     <TextView
-        android:id="@+id/tvCheckoutTitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_checkout_name"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Checkout"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
+        android:text="Flower name"
+        android:textSize="20sp"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"/>
 
+    <TextView
+        android:id="@+id/tv_checkout_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>
