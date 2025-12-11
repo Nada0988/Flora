@@ -46,5 +46,7 @@ public class CheckOut extends AppCompatActivity {
             // هنا تضيفي منطق التأكيد (Toast، HTTP request، أو Finish)
             finish(); // كمثال نرجع للصفحة السابقة
         });
+
+
     }
 }

@@ -24,6 +24,9 @@
         <activity
             android:name=".CheckOut"
             android:exported="false" />
+        <activity
+            android:name=".Details"
+            android:exported="false" />
 
     </application>
 
