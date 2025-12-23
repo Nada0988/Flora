@@ -40,10 +40,12 @@ public class Details extends AppCompatActivity {
         Button btnCheckout = findViewById(R.id.btn_checkout);
 
         btnCheckout.setOnClickListener(v -> {
+            Home.Flower currentFlower = new Home.Flower(name, price, imageRes);
+
+            Home.addItemToCart(currentFlower);
+            android.widget.Toast.makeText(Details.this, name + " added to cart", android.widget.Toast.LENGTH_SHORT).show();
+
             Intent intent = new Intent(Details.this, CheckOut.class);
-            intent.putExtra("name", name);
-            intent.putExtra("price", price);
-            intent.putExtra("imageRes", imageRes);
             startActivity(intent);
         });
 
