@@ -8,6 +8,7 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackgroundBorderless">
+    
 
     <RelativeLayout
         android:layout_width="match_parent"
